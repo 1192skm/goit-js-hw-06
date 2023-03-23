@@ -5,3 +5,5 @@ console.log(`Number of categories: ${items.children.length}`);
     console.log(`Categoty: ${num.firstElementChild.textContent}`);
     console.log(`Elements: ${num.lastElementChild.children.length}`);
 });
+
+
