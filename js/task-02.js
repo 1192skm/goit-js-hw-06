@@ -18,3 +18,4 @@ ingredients.forEach((ingredient) => {
   items.push(li)
 });
 list.append(...items);
+

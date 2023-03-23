@@ -16,8 +16,10 @@ const images = [
 const list = document.querySelector('.gallery');
 
 const item = images.map(({ url, alt }) => `<li>
-<img src="${url}" alt="${alt}" width = 600></li>`).join('');
+<img src="${url}" alt="${alt}" width = 300 height = 100%></li>`).join('');
 
 list.insertAdjacentHTML("beforeend", item);
 
-
+list.style.display = 'flex';
+list.style.listStyle = "none";
+list.style.gap = "20px";
