@@ -13,26 +13,40 @@ textInput.addEventListener('input', () => {
   createBtn.addEventListener('click', onCreateBtnClick);
 })
 
+destroyBtn.addEventListener("click", onDestroyBtnClick);
+
 function onCreateBtnClick() {
-  // createBoxes(textInput.value)
+  
   const items = new Array(Number(textInput.value));
   const itemsArray = items
     .map((item) => {
-      "<div></div>";
+      `<div></div>`;
     })
     .join("");
   container.insertAdjacentHTML("beforeend", itemsArray);
 }
 
+
+function onDestroyBtnClick() {
+  container.innerHTML = '';
+  // textInput.reset()
+}
+
+
+
+
+
+
+
+
+
+// createBoxes(textInput.value)
+
+
 // function createBoxes(amount) {
-//   const items = new Array(amount);
+//   const items = new Array(Number(amount));
 //   const itemsArray = items.map(item => {
 //     '<div></div>'
 //   }).join('')
 //   container.insertAdjacentHTML("beforeend", itemsArray);
 // };
-
-// destroyBoxes() => {
-//   container.innerHTML = '';
-//   textInput.reset()
-// }
